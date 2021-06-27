@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>クイズ</h1>
+    <div">パンはパンでも食べられないパンは？</div>
+    <button id="name">フライパン</button>
+    <button id="name1">コッペパン</button>
+    <div id="display"></div>
+    <script>
+      const name = document.getElementById("name")
+      const name1 = document.getElementById("name1")
+      const display = document.getElementById("display")
+      name.onclick = function(){
+      display.textContent = "正解"
+      }
+      name1.onclick = function(){
+          display.textContent = "コッペパンはパンだよwww"
+      }
+    </script>
+  </body>
+</html>
