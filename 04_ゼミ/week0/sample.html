@@ -9,18 +9,19 @@
   <body>
     <h1>クイズ</h1>
     <div">パンはパンでも食べられないパンは？</div>
-    <button id="name">フライパン</button>
+    <br>
+    <button id="name0">フライパン</button>
     <button id="name1">コッペパン</button>
     <div id="display"></div>
     <script>
-      const name = document.getElementById("name")
+      const name0 = document.getElementById("name0")
       const name1 = document.getElementById("name1")
       const display = document.getElementById("display")
-      name.onclick = function(){
+      name0.onclick = function(){
       display.textContent = "正解"
       }
       name1.onclick = function(){
-          display.textContent = "コッペパンはパンだよwww"
+          display.textContent = "コッペパンは食べれるよwww"
       }
     </script>
   </body>

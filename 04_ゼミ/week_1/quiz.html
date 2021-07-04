@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>たけしの趣味は何でしょう</h1>
+    <button id="b1">読書</button>
+    <button id="b2">ゲーム</button>
+    <button id="b3">野球観戦</button>
+    <div id="display"></div>
+    <script>
+      const b1 = document.getElementById("b1")
+      const b2 = document.getElementById("b2")
+      const b3 = document.getElementById("b3")
+      const display = document.getElementById("display")
+
+      b1.onclick = function() {
+        display.textContent = "不正解"
+      }
+      b2.onclick = function() {
+        display.textContent = "不正解"
+      }
+      b3.onclick = function() {
+        display.textContent = "正解"
+      }
+    </script>
+  </body>
+</html>
