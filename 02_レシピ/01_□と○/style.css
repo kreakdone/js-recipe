@@ -7,3 +7,7 @@
 .rounded {
   border-radius: 50px;
 }
+
+.transition {
+  transition: all 1s;
+}
