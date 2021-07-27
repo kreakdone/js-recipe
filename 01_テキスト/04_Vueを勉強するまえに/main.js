@@ -24,22 +24,28 @@ button.onclick = function() {
   // データを表示するコード
   const card = document.createElement("div")
   card.textContent = text
-  container.appendChild(card)
+
+  container.textContent = ""
+  for (const text of list) {
+    const card = document.createElement("div")
+    card.textContent = text
+    container.appendChild(card)
+  }
 }
 
 /**
  * Vue
  */
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {
     text: "",
-    list: JSON.parse(localStorage.list || "[]") // ["こんにちは", "おっす"]
+    list: JSON.parse(localStorage.list || "[]"), // ["こんにちは", "おっす"]
   },
   methods: {
-    addCard: function(){
+    addCard: function() {
       this.list.push(this.text)
       localStorage.list = JSON.stringify(this.list)
-    }
-  }
+    },
+  },
 })
