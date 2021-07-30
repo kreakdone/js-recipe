@@ -13,8 +13,16 @@
         <h2>入力画面</h2>
         <input type="number" v-model="nyuuryoku" />000
         <div>入力欄：{{nyuuryokuRan}}</div>
-        <button v-on:click="zandakaIn">振込</button>
-        <button v-on:click="zandakaOut">引出</button>
+        <button v-on:click="zandakaIn" v-bind:disabled="buttonTest">
+          振込
+        </button>
+        <button
+          v-on:click="zandakaOut"
+          v-bind:disabled="buttonTest"
+          v-bind:disabled="zandakaTest"
+        >
+          引出
+        </button>
         <button v-on:click="save">保存</button>
       </div>
       <div>

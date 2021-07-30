@@ -4,11 +4,11 @@ new Vue({
     nyuuryoku: 0,
     zandaka: 0,
     logs: [
-      {
-        date: new Date(),
-        type: "-",
-        money: 0,
-      },
+      // {
+      //   date: new Date(),
+      //   type: "-",
+      //   money: 0,
+      // },
     ],
   },
   created: function() {
@@ -20,6 +20,20 @@ new Vue({
       yen = Number(this.nyuuryoku) * 1000
       return yen
     },
+    zandakaTest: function() {
+      if (Number(this.zandaka) >= Number(this.nyuuryokuRan)) {
+        return false
+      } else {
+        return true
+      }
+    },
+    buttonTest: function() {
+      if (Number(this.nyuuryoku) === 0) {
+        return true
+      } else {
+        return false
+      }
+    },
   },
   methods: {
     zandakaIn: function() {
@@ -29,7 +43,6 @@ new Vue({
         type: "振込",
         money: Number(this.nyuuryokuRan),
       })
-      // (localStorage.zandaka = this.zandaka)
     },
     zandakaOut: function() {
       this.zandaka -= Number(this.nyuuryoku) * 1000
@@ -38,7 +51,6 @@ new Vue({
         type: "引出",
         money: Number(this.nyuuryokuRan),
       })
-      // (localStorage.zandaka = this.zandaka)
     },
     save: function() {
       localStorage.zandaka = this.zandaka
